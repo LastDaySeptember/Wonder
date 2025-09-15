@@ -205,7 +205,19 @@ burgerCheckbox.addEventListener('click', changeBurgerMenuItem)
 // aaccordeon
 
 const faqs = document.querySelector('#faqs')
+const faqsIcons = document.querySelectorAll('.questionIcon')
 
-faqs.addEventListener('click', () => {
-  let
+function changeFaqsIcons(iconActive) {
+  faqsIcons.forEach((icon) => {
+    icon.className = 'questionIcon'
+  })
+  iconActive.classList.add('activeQuestionIcon')
+}
+
+faqs.addEventListener('click', (event) => {
+  let question = event.target.closest('.containerQuestion')
+  if (question) {
+    let icon = question.querySelector('.questionIcon')
+    changeFaqsIcons(icon)
+  }
 })
