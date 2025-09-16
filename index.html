@@ -11,21 +11,45 @@
     <div class="container">
         
             <header>
-                <div class="logoContainer">
-                        <a href="">
-                            <img class="logo" src="./assets/icons/logo.svg" alt="logo wonders">
-                            <span>Wonders</span>
-                        </a>
+                <div id="header" class="container">
+
+                    <div class="logoContainer">
+                            <a href="#header">
+                                <span class="logoImage">
+                                    <svg  height="34px" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M59.2163 24.5786V20.3137L56.8388 17.985L59.2303 19.3378V12.2281L50.3323 22.2163L47.6113 25.4222L51.3615 23.0116L46.9352 27.6512L46.2931 30H44.3848H40.4802H33.5049L40.4802 28.5327V25.9956V19.5777V3.49431L33.7795 13.7348H36.0542L32.6121 21.8674L29.3541 23.4939L32.1196 24.8199L31.2612 26.3138L28.935 30H25.2665H24.4466H14.3859L24.4466 29.253V25.2797L24.5119 18.2531L21.4236 18.705L24.5886 16.9879L24.6814 12.2594L17.9196 19.2773L18.288 20.9643L14.1075 24.278L16.0133 23.735L9.76091 30H6.27066H5.51648H7.88231e-07L6.36248 28.1088L9.55836 20.9632L13.1242 21.6868L25.2962 8.07215L30.4598 17.7102L32.3042 9.51804L39.5581 0H42.3856L45.4529 8.25277L49.3375 10.7306L50.8526 17.9356L59.2303 9.39784L62.1637 12.1666L68.4511 25.5421L73 30H61.1676H59.7997H59.2303H50.287L59.2303 29.0353V28.0559L56.1492 26.3138L59.2163 24.5786Z" fill="#202020"/>
+                                    </svg>
+                                </span>
+                                <span class="logoText">Wonders</span>
+                            </a>
                     </div>
-                <nav>
-                    <ul>
-                        <li><a href=#>Mobile App</a></li>
-                        <li><a href=#>FAQs</a></li>
-                        <li><a href=#>Contact</a></li>
-                        <li><a href=#>Sign Up</a></li>
-                    </ul>    
-                </nav>
+
+                    <label for="burgerCheckbox">
+                        <div class="burgerIcon">
+                            
+                                    <svg width="14" height="13" viewBox="0 0 14 13" class="menuSvgIcon" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4 5C3.44772 5 3 5.44772 3 6C3 6.55228 3.44772 7 4 7H20C20.5523 7 21 6.55228 21 6C21 5.44772 20.5523 5 20 5H4ZM7 12C7 11.4477 7.44772 11 8 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H8C7.44772 13 7 12.5523 7 12ZM13 18C13 17.4477 13.4477 17 14 17H20C20.5523 17 21 17.4477 21 18C21 18.5523 20.5523 19 20 19H14C13.4477 19 13 18.5523 13 18Z" fill="#000000"/>
+                                    </svg>
+                                    <svg class="crossSvgIcon hidden" width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.15999 11.3296C0.843584 11.646 0.828517 12.2111 1.16752 12.5425C1.499 12.874 2.06401 12.8665 2.38041 12.5501L6.99091 7.93203L11.6089 12.5501C11.9329 12.874 12.4903 12.874 12.8218 12.5425C13.1458 12.2035 13.1533 11.6536 12.8218 11.3296L8.21133 6.71161L12.8218 2.10112C13.1533 1.77718 13.1533 1.2197 12.8218 0.888227C12.4828 0.564287 11.9329 0.556753 11.6089 0.880693L6.99091 5.49872L2.38041 0.880693C2.06401 0.564287 1.49146 0.54922 1.16752 0.888227C0.83605 1.2197 0.843584 1.78471 1.15999 2.10112L5.77801 6.71161L1.15999 11.3296Z" fill="#202020"/>
+                                    </svg>
+                        </div>
+                    </label>
+
+                    <input type="checkbox" checked id="burgerCheckbox">
+
+                    <nav>
+                        <ul>
+                            <li><a href="#mobileApps">Mobile App</a></li>
+                            <li><a href="#faqs">FAQs</a></li>
+                            <li><a href="#contacts">Contact</a></li>
+                            <li><a href="#footer">Sign Up</a></li>
+                        </ul>    
+                    </nav>
+
+                </div>
             </header>
+
 
 
 
@@ -36,7 +60,7 @@
                         <p>We sell tickets to the best seats in the house – houses on wheels, that is!  Get ready for jaw-dropping views without breaking a sweat.</p>
 
                         <form>
-                            <div class="typeOfTrip">
+                            <div class="tripTypeCounter">
                                 
                                 <div class="tripItem">
                                     <label>
@@ -54,20 +78,30 @@
                                 
                                 <div class="tripItem" id="peopleCounter" >
                                     <img src="./assets/icons/icon_person.svg" alt="person icon">
-                                    <button type="button">-</button>
+                                    <button type="button" id="decrementButton">-</button>
                                     <span id="peopleCount">1</span>
-                                    <button type="button">+</button>
+                                    <button type="button" id="incrementButton">+</button>
                                 </div>
                             </div>
 
                             <fieldset class="inOutField">
-                                <div class="inOutItem">
+                                <div class="inOutItem departureGroup">
                                     <h3>Departure</h3>
-                                    <input type='text'  name="departureCity" value="" placeholder="Your City/Station">
+                                    <input type='text'  name="departureCity" value="" placeholder="Your City/Station" id="departureInput" autocomplete="off">
+                                    <div class="stationsList hidden">
+                                        <ul class="stationsListContainer">
+ 
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="inOutItem">
+                                <div class="inOutItem arrivalGroup">
                                     <h3>Arrival</h3>
-                                    <input type='text'  name="arrivalCity" value="" placeholder="Where to?">
+                                    <input type='text'  name="arrivalCity" value="" placeholder="Where to?" id="arrivalInput" autocomplete="off">
+                                     <div class="stationsList hidden">
+                                        <ul class="stationsListContainer">
+
+                                        </ul>
+                                    </div>
                                 </div>
                             <div class="inOutItem">
                                     <h3>Pick your lucky day</h3>
@@ -84,9 +118,12 @@
                             <button type="button" id="fineAlpineRide">Find My Alpine Ride</button>     
                         </form>
                     </div>
+
+
                     <div id="heroImage">
                         <img src="./assets/images/img_hero.png" alt="mountains hero image">
                     </div>
+
                 </section>
             
 
@@ -148,59 +185,127 @@
 
                 <section id="faqs">
                     <h1>FAQs.</h1>
-                    <div class="faqItem">
-                        <div class="questionHeadlineLine">
-                            <span class="questionHeadline">Alpine Bus Journeys?</span>
-                            <div class="closeOpenIcon"></div>
-                        </div>
-                        <div class="questionDescription">Forget crowded cities! Alpine Bus Journeys are your comfy seat with panoramic windows to breathtaking mountain vistas, charming villages, and air so fresh it might make you yodel (please don't, unless you're outside). It's transportation with a side of unparalleled scenery (and maybe a hairpin turn).
-                        </div>
 
-                        <div class="questionHeadlineLine">
-                            <span class="questionHeadline">What about seating options?</span>
-                            <div class="closeOpenIcon"></div>
-                        </div>
-                        <div class="questionDescription">Generally, you'll find comfy standard seats (great views, great value, maybe great new friends) and perhaps slightly better seats with extra legroom. All offer a front-row seat to the greatest show on Earth – the Alps!
-                        </div>
+                    <div id="containerQ1" class="containerQuestion">
+                        <div class="questionHL">
+                            <label for="q1" class="q1Label">
+                                <span>Alpine Bus Journeys?</span>
+                                <div class="questionIcon activeQuestionIcon">
+                                    <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.15999 11.3296C0.843584 11.646 0.828517 12.2111 1.16752 12.5425C1.499 12.874 2.06401 12.8665 2.38041 12.5501L6.99091 7.93203L11.6089 12.5501C11.9329 12.874 12.4903 12.874 12.8218 12.5425C13.1458 12.2035 13.1533 11.6536 12.8218 11.3296L8.21133 6.71161L12.8218 2.10112C13.1533 1.77718 13.1533 1.2197 12.8218 0.888227C12.4828 0.564287 11.9329 0.556753 11.6089 0.880693L6.99091 5.49872L2.38041 0.880693C2.06401 0.564287 1.49146 0.54922 1.16752 0.888227C0.83605 1.2197 0.843584 1.78471 1.15999 2.10112L5.77801 6.71161L1.15999 11.3296Z" fill="#202020"/>
+                                    </svg>
+                                </div>
+                            </label>
 
-                        <div class="questionHeadlineLine">
-                            <span class="questionHeadline">What is the Alpine Wallet?</span>
-                            <div class="closeOpenIcon"></div>
-                        </div>
-                        <div class="questionDescription">It's your digital stash of cash that makes booking bus tickets smoother than a perfectly paved mountain road. Load it up and watch your travel dreams become reality faster than a bus goes downhill.
-                        </div>
+                            <input type="radio" name="faqs" id="q1" checked>
 
-                        <div class="questionHeadlineLine">
-                            <span class="questionHeadline">My Altitude Score?</span>
-                            <div class="closeOpenIcon"></div>
+                            <div class="q1Answer answer">
+                                <p>Forget crowded cities! Alpine Bus Journeys are your comfy seat with panoramic windows to breathtaking mountain vistas, charming villages, and air so fresh it might make you yodel (please don't, unless you're outside). It's transportation with a side of unparalleled scenery (and maybe a hairpin turn).</p>
+                            </div>
                         </div>
-                        <div class="questionDescription">Your loyalty points for cruising the mountain roads! Higher scores might get you priority boarding (less elbowing for the best window seat!) or maybe just bragging rights among fellow peak-passengers who prefer four wheels.
-                        </div>
-
-                        <div class="questionHeadlineLine">
-                            <span class="questionHeadline">Why a Bus Station Fee?</span>
-                            <div class="closeOpenIcon"></div>
-                        </div>
-                        <div class="questionDescription">A small contribution to ensure the station is clean, has reasonably fresh mountain air (filtered from bus fumes), and enough signs pointing you towards your bus, not away from it. Sometimes covers the cost of moving rogue bicycles.
-                        </div>
-
-                        <div class="questionHeadlineLine">
-                            <span class="questionHeadline">Why are buses late?</span>
-                            <div class="closeOpenIcon">Sometimes it's the weather (snow happens!), sometimes a sudden flock of particularly slow-moving sheep on the road, and sometimes the driver just had to stop for a photo of that view. Or maybe they got stuck behind a tractor. Welcome to "Mountain Road Time"!</div>
-                        </div>
-                        <div class="questionDescription">
-                        </div>
-
-                         <div class="questionHeadlineLine">
-                            <span class="questionHeadline">Peak Season Surcharge?</span>
-                            <div class="closeOpenIcon">It's the little extra you pay to enjoy the authentic experience of sharing breathtaking views with a lot of your closest friends (who you haven't met yet) while strategically placing your bag in the overhead compartment. Guarantees a vibrant, energetic journey!</div>
-                        </div>
-                        <div class="questionDescription">
-                        </div>
-                        
-                        
                     </div>
-                    
+
+                    <div id="containerQ2" class="containerQuestion">
+                        <div class="questionHL">
+                            <label for="q2" class="q2Label">
+                                <span>What about seating options?</span>
+                                <div class="questionIcon">
+                                    <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.15999 11.3296C0.843584 11.646 0.828517 12.2111 1.16752 12.5425C1.499 12.874 2.06401 12.8665 2.38041 12.5501L6.99091 7.93203L11.6089 12.5501C11.9329 12.874 12.4903 12.874 12.8218 12.5425C13.1458 12.2035 13.1533 11.6536 12.8218 11.3296L8.21133 6.71161L12.8218 2.10112C13.1533 1.77718 13.1533 1.2197 12.8218 0.888227C12.4828 0.564287 11.9329 0.556753 11.6089 0.880693L6.99091 5.49872L2.38041 0.880693C2.06401 0.564287 1.49146 0.54922 1.16752 0.888227C0.83605 1.2197 0.843584 1.78471 1.15999 2.10112L5.77801 6.71161L1.15999 11.3296Z" fill="#202020"/>
+                                    </svg>
+                                </div>
+                            </label>
+                            <input type="radio" name="faqs" id="q2">
+                            <div class="q2Answer answer">
+                                <p>Generally, you'll find comfy standard seats (great views, great value, maybe great new friends) and perhaps slightly better seats with extra legroom. All offer a front-row seat to the greatest show on Earth – the Alps!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="containerQ3" class="containerQuestion">
+                        <div class="questionHL">
+                            <label for="q3" class="q3Label">
+                                <span>What is the Alpine Wallet?</span>
+                                <div class="questionIcon">
+                                    <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.15999 11.3296C0.843584 11.646 0.828517 12.2111 1.16752 12.5425C1.499 12.874 2.06401 12.8665 2.38041 12.5501L6.99091 7.93203L11.6089 12.5501C11.9329 12.874 12.4903 12.874 12.8218 12.5425C13.1458 12.2035 13.1533 11.6536 12.8218 11.3296L8.21133 6.71161L12.8218 2.10112C13.1533 1.77718 13.1533 1.2197 12.8218 0.888227C12.4828 0.564287 11.9329 0.556753 11.6089 0.880693L6.99091 5.49872L2.38041 0.880693C2.06401 0.564287 1.49146 0.54922 1.16752 0.888227C0.83605 1.2197 0.843584 1.78471 1.15999 2.10112L5.77801 6.71161L1.15999 11.3296Z" fill="#202020"/>
+                                    </svg>
+                                </div>
+                            </label>
+                            <input type="radio" name="faqs" id="q3">
+                            <div class="q3Answer answer">
+                                <p>It's your digital stash of cash that makes booking bus tickets smoother than a perfectly paved mountain road. Load it up and watch your travel dreams become reality faster than a bus goes downhill.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="containerQ4" class="containerQuestion">
+                        <div class="questionHL">
+                            <label for="q4" class="q4Label">
+                                <span>My Altitude Score?</span>
+                                <div class="questionIcon">
+                                    <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.15999 11.3296C0.843584 11.646 0.828517 12.2111 1.16752 12.5425C1.499 12.874 2.06401 12.8665 2.38041 12.5501L6.99091 7.93203L11.6089 12.5501C11.9329 12.874 12.4903 12.874 12.8218 12.5425C13.1458 12.2035 13.1533 11.6536 12.8218 11.3296L8.21133 6.71161L12.8218 2.10112C13.1533 1.77718 13.1533 1.2197 12.8218 0.888227C12.4828 0.564287 11.9329 0.556753 11.6089 0.880693L6.99091 5.49872L2.38041 0.880693C2.06401 0.564287 1.49146 0.54922 1.16752 0.888227C0.83605 1.2197 0.843584 1.78471 1.15999 2.10112L5.77801 6.71161L1.15999 11.3296Z" fill="#202020"/>
+                                    </svg>
+                                </div>
+                            </label>
+                            <input type="radio" name="faqs" id="q4">
+                            <div class="q4Answer answer">
+                                <p>Your loyalty points for cruising the mountain roads! Higher scores might get you priority boarding (less elbowing for the best window seat!) or maybe just bragging rights among fellow peak-passengers who prefer four wheels.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="containerQ5" class="containerQuestion">
+                        <div class="questionHL">
+                            <label for="q5" class="q5Label">
+                                <span>Why a Bus Station Fee?</span>
+                                <div class="questionIcon">
+                                    <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.15999 11.3296C0.843584 11.646 0.828517 12.2111 1.16752 12.5425C1.499 12.874 2.06401 12.8665 2.38041 12.5501L6.99091 7.93203L11.6089 12.5501C11.9329 12.874 12.4903 12.874 12.8218 12.5425C13.1458 12.2035 13.1533 11.6536 12.8218 11.3296L8.21133 6.71161L12.8218 2.10112C13.1533 1.77718 13.1533 1.2197 12.8218 0.888227C12.4828 0.564287 11.9329 0.556753 11.6089 0.880693L6.99091 5.49872L2.38041 0.880693C2.06401 0.564287 1.49146 0.54922 1.16752 0.888227C0.83605 1.2197 0.843584 1.78471 1.15999 2.10112L5.77801 6.71161L1.15999 11.3296Z" fill="#202020"/>
+                                    </svg>
+                                </div>
+                            </label>
+                            <input type="radio" name="faqs" id="q5">
+                            <div class="q5Answer answer">
+                                <p>A small contribution to ensure the station is clean, has reasonably fresh mountain air (filtered from bus fumes), and enough signs pointing you towards your bus, not away from it. Sometimes covers the cost of moving rogue bicycles.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="containerQ6" class="containerQuestion">
+                        <div class="questionHL">
+                            <label for="q6" class="q6Label">
+                                <span>Why are buses late?</span>
+                                <div class="questionIcon">
+                                    <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.15999 11.3296C0.843584 11.646 0.828517 12.2111 1.16752 12.5425C1.499 12.874 2.06401 12.8665 2.38041 12.5501L6.99091 7.93203L11.6089 12.5501C11.9329 12.874 12.4903 12.874 12.8218 12.5425C13.1458 12.2035 13.1533 11.6536 12.8218 11.3296L8.21133 6.71161L12.8218 2.10112C13.1533 1.77718 13.1533 1.2197 12.8218 0.888227C12.4828 0.564287 11.9329 0.556753 11.6089 0.880693L6.99091 5.49872L2.38041 0.880693C2.06401 0.564287 1.49146 0.54922 1.16752 0.888227C0.83605 1.2197 0.843584 1.78471 1.15999 2.10112L5.77801 6.71161L1.15999 11.3296Z" fill="#202020"/>
+                                    </svg>
+                                </div>
+                            </label>
+                            <input type="radio" name="faqs" id="q6">
+                            <div class="q6Answer answer">
+                                <p>Sometimes it's the weather (snow happens!), sometimes a sudden flock of particularly slow-moving sheep on the road, and sometimes the driver just had to stop for a photo of that view. Or maybe they got stuck behind a tractor. Welcome to "Mountain Road Time"!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="containerQ7" class="containerQuestion">
+                        <div class="questionHL">
+                            <label for="q7" class="q7Label">
+                                <span>Peak Season Surcharge?</span>
+                                <div class="questionIcon">
+                                    <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.15999 11.3296C0.843584 11.646 0.828517 12.2111 1.16752 12.5425C1.499 12.874 2.06401 12.8665 2.38041 12.5501L6.99091 7.93203L11.6089 12.5501C11.9329 12.874 12.4903 12.874 12.8218 12.5425C13.1458 12.2035 13.1533 11.6536 12.8218 11.3296L8.21133 6.71161L12.8218 2.10112C13.1533 1.77718 13.1533 1.2197 12.8218 0.888227C12.4828 0.564287 11.9329 0.556753 11.6089 0.880693L6.99091 5.49872L2.38041 0.880693C2.06401 0.564287 1.49146 0.54922 1.16752 0.888227C0.83605 1.2197 0.843584 1.78471 1.15999 2.10112L5.77801 6.71161L1.15999 11.3296Z" fill="#202020"/>
+                                    </svg>
+                                </div>
+                            </label>
+                            <input type="radio" name="faqs" id="q7">
+                            <div class="q7Answer answer">
+                                <p>It's the little extra you pay to enjoy the authentic experience of sharing breathtaking views with a lot of your closest friends (who you haven't met yet) while strategically placing your bag in the overhead compartment. Guarantees a vibrant, energetic journey!</p>
+                            </div>
+                        </div>
+                    </div>
 
                 </section>
 
@@ -227,29 +332,30 @@
             </div>
             
             <div id="logoNavLegal">
-                
                 <div id="logoNav">
-
                     <div class="logoContainer">
-                        <a href="">
-                            <img class="logo" src="./assets/icons/Logo_white.svg" alt="logo wonders">
-                            <span class="whiteText">Wonders</span>
+                        <a href="#header">
+                            <span class="logoImage">
+                                <svg  height="34px" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M59.2163 24.5786V20.3137L56.8388 17.985L59.2303 19.3378V12.2281L50.3323 22.2163L47.6113 25.4222L51.3615 23.0116L46.9352 27.6512L46.2931 30H44.3848H40.4802H33.5049L40.4802 28.5327V25.9956V19.5777V3.49431L33.7795 13.7348H36.0542L32.6121 21.8674L29.3541 23.4939L32.1196 24.8199L31.2612 26.3138L28.935 30H25.2665H24.4466H14.3859L24.4466 29.253V25.2797L24.5119 18.2531L21.4236 18.705L24.5886 16.9879L24.6814 12.2594L17.9196 19.2773L18.288 20.9643L14.1075 24.278L16.0133 23.735L9.76091 30H6.27066H5.51648H7.88231e-07L6.36248 28.1088L9.55836 20.9632L13.1242 21.6868L25.2962 8.07215L30.4598 17.7102L32.3042 9.51804L39.5581 0H42.3856L45.4529 8.25277L49.3375 10.7306L50.8526 17.9356L59.2303 9.39784L62.1637 12.1666L68.4511 25.5421L73 30H61.1676H59.7997H59.2303H50.287L59.2303 29.0353V28.0559L56.1492 26.3138L59.2163 24.5786Z" fill="#202020"/>
+                                </svg>
+                            </span>
+                            <span class="logoText whiteText">Wonders</span>
                         </a>
                     </div>
 
                     <div id="menuContainer">
-                        <ul >
-                                <li class="menuTitle"><a href="#">About</a></li>
+                        <ul class="menuAbout">
+                                <li class="menuTitle">About</li>
                                 <li><a href="#">How it works</a></li>
                                 <li><a href="#">Featured</a></li>
                                 <li><a href="#">Partnership</a></li>
                                 <li><a href="#">Business Relation</a></li>
 
                             
-                            
                         </ul>
                         <ul class="menuCommunity">
-                                <li class="menuTitle"><a href="#">Community</a></li>
+                                <li class="menuTitle">Community</li>
                                 <li><a href="#">Events</a></li>
                                 <li><a href="#">Blog</a></li>
                                 <li><a href="#">Podcast</a></li>
@@ -259,17 +365,17 @@
                             
                         </ul>
                         <ul class="menuContacts">
-
-                                <li class="menuTitle"><a href="#">Socials</a></li>
+                                <li class="menuTitle">Socials</li>
                                 <li ><a href="#">Discord</a></li>
                                 <li><a href="#">Instagram</a></li>
                                 <li><a href="#">Twitter</a></li>
                                 <li><a href="#">Facebook</a></li>
-                            </div>
-                            
-                            
-                        </ul>
+                         </ul>
                     </div>
+                            
+                            
+                        
+                </div>
 
                     
                 </div>
