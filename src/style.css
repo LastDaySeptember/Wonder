@@ -1,3 +1,5 @@
+/*!!! ПАДДИНГИ УМЕНЬШАТЬ ПРИ АДАПТИВНОСТИ*/
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /* 02217092025 */
@@ -22,6 +24,7 @@ body {
   line-height: 1.5;
   /* 5. Improve text rendering */
   -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
 }
 
 /* 7. Inherit fonts for form controls */
@@ -135,7 +138,7 @@ nav ul {
   list-style: none;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: baseline;
   gap: min(6vw, 6rem);
   font-size: min(1.5vw, 1.25rem);
@@ -266,7 +269,7 @@ input[type='radio']:hover {
 }
 
 input[type='radio']:checked {
-  background-image: url('./assets/icons/radio_button_selected.svg');
+  background-image: url('../assets/icons/radio_button_selected.svg');
   background-size: cover;
   padding: 0;
   margin: 0;
@@ -394,19 +397,24 @@ input[type='radio']:checked {
 }
 
 /* ADVANTAGES */
-.advantages {
+.advantages-section {
+    background-color: var(--primary-color);
+}
+
+
+.advantages-container {
   width: 100%;
-  background-color: var(--primary-color);
   color: white;
 
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 
   padding: 3.75rem 4rem;
+    flex-wrap: wrap;
 }
 
-.advantages div {
+.advantages-container div {
   text-align: center;
 }
 
@@ -493,7 +501,7 @@ input[type='radio']:checked {
 }
 
 #apps > div {
-  width: 863px;
+  max-width: 863px;
   aspect-ratio: 8.96 / 1;
   margin: 0 auto;
 }
@@ -515,7 +523,6 @@ input[type='radio']:checked {
 .appIcons a {
   flex-grow: 0;
   flex-shrink: 0;
-  flex-basis: calc(33%-4rem);
 }
 
 .appIcons img {
@@ -525,6 +532,10 @@ input[type='radio']:checked {
 }
 
 /* FAQs */
+.faqs-container {
+    max-width: 1086px;
+    margin-inline: auto;
+}
 #faqs {
   padding: 8rem;
   padding-bottom: 16rem;
@@ -657,13 +668,12 @@ footer .logoImage svg path {
   color: white;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-between;
   flex-wrap: wrap;
   padding: 0;
 }
 
 #menuContainer ul {
-  margin-left: 2rem;
   list-style: none;
   padding: 0;
   display: flex;
@@ -685,7 +695,6 @@ footer .logoImage svg path {
   margin: 00.5rem 0.5rem 0.5rem 0rem;
 
   display: block;
-  width: 50%;
   color: white;
   transition: background-color 0.1s ease-in-out;
 }
@@ -727,12 +736,10 @@ footer .logoImage svg path {
   }
 
   #header {
-    position: relative;
     height: 7.25rem;
     align-items: center;
     width: 100%;
     padding: 2.5rem;
-    margin: 0;
     z-index: 1000;
   }
 
@@ -754,9 +761,6 @@ footer .logoImage svg path {
   .burgerIcon {
     display: block;
     padding: 0.5rem;
-    margin: 0 1rem;
-    position: absolute;
-    right: 1.2rem;
     width: 30px;
     height: 30px;
     z-index: 500;
@@ -784,6 +788,7 @@ footer .logoImage svg path {
     min-height: 100vw;
     top: 7.25rem;
     left: 0;
+      z-index: 99;
   }
 
   #header input[type='checkbox']:checked + nav ul {
@@ -795,7 +800,7 @@ footer .logoImage svg path {
     transition: transform 0.2s ease-in-out;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     padding: 2.5rem 2.5rem;
     margin: 0;
 
@@ -895,8 +900,9 @@ footer .logoImage svg path {
   /* TABLET FOOTERS */
 
   #menuContainer {
-    justify-content: flex-start;
+    justify-content: space-between;
     gap: 2rem;
+      min-width: 80%;
   }
   #logoNav {
     flex-direction: column;
@@ -928,7 +934,6 @@ footer .logoImage svg path {
   }
 
   #header {
-    position: relative;
     height: 7.25rem;
     align-items: center;
     width: 100%;

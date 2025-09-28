@@ -140,6 +140,10 @@ departureInput.addEventListener('focus', () => {
   }
 })
 
+// Для того чтобы скрыть или показать скролл
+// document.body.style.overflowY = 'hidden'
+// document.body.style.overflowY = 'auto'
+
 departureInput.addEventListener('blur', () => {
   setTimeout(() => {
     if (departureStationsItemsList) {
